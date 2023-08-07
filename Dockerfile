@@ -1,2 +1,5 @@
-FROM alpine:3.17
+FROM alpine as a
+RUN apt-get install a
+FROM alpine
 RUN apk add python
+ADD a b /c
